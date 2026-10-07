@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NatureQuest AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background decoration -->
+    <div class="background-glow glow1"></div>
+    <div class="background-glow glow2"></div>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            🌿 NatureQuest <span>AI</span>
+        </div>
+
+        <div class="stats">
+            <div>
+                <small>LEVEL</small>
+                <strong id="level">1</strong>
+            </div>
+
+            <div>
+                <small>XP</small>
+                <strong id="xp">0</strong>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <div class="badge">
+                🤖 AI-powered outdoor exploration
+            </div>
+
+            <h1>
+                Get Out.<br>
+                <span>Explore.</span><br>
+                Discover.
+            </h1>
+
+            <p>
+                NatureQuest AI turns your surroundings into
+                real-world missions. Your screen gives you
+                the mission — then you put the phone away.
+            </p>
+
+            <button class="primary-btn" onclick="startQuest()">
+                START EXPLORATION →
+            </button>
+
+        </div>
+
+        <div class="hero-card">
+
+            <div class="card-icon">🌳</div>
+
+            <h3>Today's Adventure</h3>
+
+            <p>
+                Discover something in nature
+                that you have never noticed before.
+            </p>
+
+            <div class="card-bottom">
+                <span>⚡ +50 XP</span>
+                <span>⏱ 10 MIN</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUEST SECTION -->
+    <section class="quest-section hidden" id="questSection">
+
+        <div class="section-heading">
+            <span>YOUR AI MISSION</span>
+            <h2 id="missionTitle">
+                🎯 Mission #1
+            </h2>
+        </div>
+
+
+        <div class="quest-card">
+
+            <div class="mission-number">
+                MISSION 01
+            </div>
+
+            <h2 id="missionText">
+                Find something outside that has
+                a repeating natural pattern.
+            </h2>
+
+            <div class="timer">
+                <span>⏱</span>
+                <span id="timer">05:00</span>
+            </div>
+
+
+            <div class="phone-down">
+
+                <div class="lock-icon">
+                    🔒
+                </div>
+
+                <div>
+                    <strong>PHONE DOWN</strong>
+                    <p>
+                        Go outside and complete the mission.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <button
+                class="complete-btn"
+                onclick="openCamera()"
+            >
+                📷 I'VE FOUND IT
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CAMERA / UPLOAD -->
+    <section class="upload-section hidden" id="uploadSection">
+
+        <div class="section-heading">
+            <span>AI VERIFICATION</span>
+
+            <h2>
+                Show NatureQuest what you found
+            </h2>
+        </div>
+
+
+        <div class="upload-card">
+
+            <div class="camera-icon">
+                📸
+            </div>
+
+            <p>
+                Take a photo or select one from your device.
+            </p>
+
+            <input
+                type="file"
+                id="photoInput"
+                accept="image/*"
+                capture="environment"
+                onchange="analyzePhoto(event)"
+            >
+
+            <label for="photoInput" class="upload-btn">
+                📷 TAKE / UPLOAD PHOTO
+            </label>
+
+            <div id="previewContainer"></div>
+
+            <div
+                id="aiResult"
+                class="ai-result hidden"
+            >
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROGRESS -->
+    <section class="progress-section">
+
+        <div class="progress-card">
+
+            <div>
+                <small>YOUR PROGRESS</small>
+
+                <h3>
+                    Outdoor Explorer
+                </h3>
+            </div>
+
+            <div class="progress-bar">
+                <div
+                    id="progress"
+                    class="progress"
+                ></div>
+            </div>
+
+            <p id="progressText">
+                0 / 100 XP to Level 2
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            🌿 NatureQuest AI
+        </div>
+
+        <p>
+            AI that gets you outside instead of keeping
+            you on the screen.
+        </p>
+
+        <div class="footer-line">
+            Built with HTML • CSS • JavaScript • Open AI
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
